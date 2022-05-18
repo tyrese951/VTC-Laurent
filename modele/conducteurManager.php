@@ -30,14 +30,14 @@ class ConducteurManager extends Manager {
     public function newConducteurDB($prenom,$nom){
         $req = "INSERT INTO conducteurs (prenom, nom) VALUES (:prenom, :nom)";
         $statement = $this->getBdd()->prepare($req);
-        $statement->bindValue(":prenom",$title, PDO::PARAM_STR);
-        $statement->bindValue(":nom",$nbPlayers, PDO::PARAM_STR);
+        $statement->bindValue(":prenom",$prenom, PDO::PARAM_STR);
+        $statement->bindValue(":nom",$nom, PDO::PARAM_STR);
         $result = $statement->execute();
         $statement->closeCursor();
 
         if ($result) {
-            $g = new Game($this->getBdd()->lastInsertId(),$title,$nbPlayers);
-            $this->addGame($g);
+            $c = new Conducteur($this->getBdd()->lastInsertId(),$prenom,$nom);
+            $this->addGame($c);
         }
         
     }
