@@ -11,12 +11,12 @@
   </thead>
   <tbody>
 
-     <?php foreach($games as $game) :?>
+     <?php foreach($conducteurs as $conducteur) :?>
         <tr>
-          <td><?= $game->getTitle() ?></td>
-          <td><?= $game->getNbPlayers() ?></td>
-          <td><a href="<?=URL ?>games/edit"><i class="fa-solid fa-edit"></i></a></td>
-        <td><a href="<?=URL ?>games/delete"><i class="fa-solid fa-trash"></i></a></td>
+          <td><?= $game->getprenom() ?></td>
+          <td><?= $game->getnom() ?></td>
+          <td><a href="<?=URL ?>conducteurs/edit"><i class="fa-solid fa-edit"></i></a></td>
+        <td><a href="<?=URL ?>gaconducteursmes/delete"><i class="fa-solid fa-trash"></i></a></td>
 
         </tr>
      <?php endforeach; ?>   

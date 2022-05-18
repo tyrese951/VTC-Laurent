@@ -1,17 +1,17 @@
 <?php
 
-class Game {
+class Conducteur {
 
 
     private $id;
-    private $title;
-    private $nbPlayers;
+    private $prenom;
+    private $nom;
 
-    public function __construct($id,$title,$nbPlayers){
+    public function __construct($id,$prenom,$nom){
 
         $this->id = $id;
-        $this->title = $title;
-        $this->nbPlayers = $nbPlayers;
+        $this->prenom = $prenom;
+        $this->nom = $nom;
         
     }
 
@@ -38,9 +38,9 @@ class Game {
     /**
      * Get the value of title
      */ 
-    public function getTitle()
+    public function getprenom()
     {
-        return $this->title;
+        return $this->prenom;
     }
 
     /**
@@ -48,9 +48,9 @@ class Game {
      *
      * @return  self
      */ 
-    public function setTitle($title)
+    public function setprenom($title)
     {
-        $this->title = $title;
+        $this->prenom = $prenom;
 
         return $this;
     }
@@ -59,9 +59,9 @@ class Game {
     /**
      * Get the value of nbPlayers
      */ 
-    public function getNbPlayers()
+    public function getnom()
     {
-        return $this->nbPlayers;
+        return $this->nom;
     }
 
     /**
@@ -69,9 +69,9 @@ class Game {
      *
      * @return  self
      */ 
-    public function setNbPlayers($nbPlayers)
+    public function setnom($nbPlayers)
     {
-        $this->nbPlayers = $nbPlayers;
+        $this->nom = $nom;
 
         return $this;
     }

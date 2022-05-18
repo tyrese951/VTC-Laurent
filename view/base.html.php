@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Fr">
+<html lang="FR">
 
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,13 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= URL ?>accueil">conducteur</a>
+                    <a class="nav-link" href="<?= URL ?>conducteur">conducteur</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= URL ?>games">association vehicule</a>
+                    <a class="nav-link" href="<?= URL ?>association vehicule">association vehicule</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= URL ?>users">vehicule</a>
+                    <a class="nav-link" href="<?= URL ?>vehicule">vehicule</a>
                 </li>
             </ul>
         </div>
