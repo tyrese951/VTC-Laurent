@@ -26,7 +26,7 @@ class ConducteurManager extends Manager {
         }
 
     }
-
+    
     public function newConducteurDB($prenom,$nom){
         $req = "INSERT INTO conducteurs (prenom, nom) VALUES (:prenom, :nom)";
         $statement = $this->getBdd()->prepare($req);
@@ -37,7 +37,7 @@ class ConducteurManager extends Manager {
 
         if ($result) {
             $c = new Conducteur($this->getBdd()->lastInsertId(),$prenom,$nom);
-            $this->addGame($c);
+            $this->addConducteur($c);
         }
         
     }

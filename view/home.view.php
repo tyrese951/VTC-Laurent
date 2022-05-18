@@ -9,7 +9,7 @@
 <?php
 
 $content =ob_get_clean();
-$title = "Bienvenue chez Game-X";
+$title = "Bienvenue chez VTC";
 require_once "base.html.php";
 
 ?>

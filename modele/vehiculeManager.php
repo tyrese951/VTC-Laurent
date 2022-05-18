@@ -6,28 +6,27 @@ class VehiculeManager extends Manager {
 
     private $vehicules;
 
-    public function addUser($vehicule){
+    public function addvehicule($vehicule){
         $this->vehicules[] = $vehicule;
     }
 
-    public function getvehicules(){
+    public function getvehicule(){
         return $this->vehicules;
     }
 
-    public function loadvehicules(){
+    public function loadvehicule(){
         $req = $this->getBdd()->prepare("SELECT * FROM vehicule");
         $req->execute();
         $myUsers = $req->fetchAll(PDO::FETCH_ASSOC);
         $req->closeCursor();
 
-        foreach($myUsers as $user){
-            $v = new User($user['id_vehicule'],$user['marque'],$user['modele'],$user['couleur'],$user['immatriculation']);
-            $this->addUser($v);
+        foreach($myvehicules as $vehicule){
+            $v = new Vehicule($vehicule['id_vehicule'],$vehicule['marque'],$vehicule['modele'],$vehicule['couleur'],$vehicule['immatriculation']);
+            $this->addUvehicule($v);
         }
 
     }
 
-    
 
 
 }

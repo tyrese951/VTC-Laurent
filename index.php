@@ -13,24 +13,55 @@ if(empty($_GET['page'])){
         case 'accueil': require_once "view/home.view.php";
         break;
 
-        case 'games': 
+
+        case 'Conducteur': 
             if(empty($url[1])){
-                $conducteurController->displayconducteur();
+                $conducteurController->displayConducteur();
             }elseif($url[1] == "add"){
-                $conducteurController->newconducteurForm();
+                $conducteurController->newConducteurForm();
             }elseif($url[1] == "gvalid"){
-                $conducteurController->newconducteurValidation();
+                $conducteurController->newConducteurValidation();
             }elseif($url[1] == "edit"){
-                $conducteurController->editconducteurForm($url[2]); 
+                $conducteurController->editConducteurForm($url[2]); 
             }elseif($url[1] == "delete"){
-                echo "Supprimer un conducteur";
+                // echo "Supprimer un conducteur";
+            }
+            break;
+            
+            case 'conducteur': require_once "view/conducteur.view.php";
+
+        case 'Vehicule': 
+            if(empty($url[1])){
+                $vehiculeController->displayVehicule();
+            }elseif($url[1] == "add"){
+                $vehiculeController->newVehiculeForm();
+            }elseif($url[1] == "gvalid"){
+                $vehiculeController->newVehiculeValidation();
+            }elseif($url[1] == "edit"){
+                $vehiculeController->editvehiculeForm($url[2]); 
+            }elseif($url[1] == "delete"){
+                // echo "Supprimer un vehicule";
             }
         break;
-
+        // case 'vehicule': require_once "view/vehicule.view.php";
+        // break;
         
-        case 'users': require_once "view/users.view.php";
-        break;
-    }
+    
+    case 'association_vehicule_conducteur': 
+        if(empty($url[1])){
+            $association_vehicule_conducteurController->displayassociation_vehicule_conducteur();
+        }elseif($url[1] == "add"){
+            $association_vehicule_conducteurController->newassociation_vehicule_conducteurForm();
+        }elseif($url[1] == "gvalid"){
+            $association_vehicule_conducteurController->newassociation_vehicule_conducteurValidation();
+        }elseif($url[1] == "edit"){
+            $association_vehicule_conducteurController->editassociation_vehicule_conducteurForm($url[2]); 
+        }elseif($url[1] == "delete"){
+            // echo "Supprimer l'association";
+        }
+    break;
+    // case 'association_vehicule_conducteur': require_once "view/association_vehicule_conducteur.view.php";
+    // break;
 }
 
 
@@ -38,9 +69,5 @@ if(empty($_GET['page'])){
 
 
 
-
-
-
-
-
+}
 
